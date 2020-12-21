@@ -1,0 +1,14 @@
+#more-infor-page {
+    text-align: center;
+}
+
+#phone-field {
+    padding-left: 10px;
+}
+#recaptcha-container {
+    margin: auto;
+}
+#recaptcha-wrapper {
+    display: flex;
+    margin: 10px;
+}
