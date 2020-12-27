@@ -7,7 +7,6 @@ import ListItem from '@material-ui/core/ListItem';
 import ListItemIcon from '@material-ui/core/ListItemIcon';
 import ListItemText from '@material-ui/core/ListItemText';
 import PersonAddIcon from '@material-ui/icons/PersonAdd';
-import LibraryAddIcon from '@material-ui/icons/LibraryAdd';
 import InfoIcon from '@material-ui/icons/Info';
 import SettingsIcon from '@material-ui/icons/Settings';
 import PersonPinIcon from '@material-ui/icons/PersonPin';
@@ -15,6 +14,8 @@ import { Typography, IconButton } from '@material-ui/core';
 import TwitterIcon from '@material-ui/icons/Twitter';
 import FacebookIcon from '@material-ui/icons/Facebook';
 import GitHubIcon from '@material-ui/icons/GitHub';
+import ArrowForwardIosOutlinedIcon from '@material-ui/icons/ArrowForwardIosOutlined';
+
 const useStyles = makeStyles({
   listWrapper: {
     width: 270,
@@ -156,7 +157,10 @@ export default function TemporaryDrawer() {
   return (
     <div>
       <React.Fragment>
-        <LibraryAddIcon fontSize='large' onClick={toggleDrawer(true)} />
+        <ArrowForwardIosOutlinedIcon
+          fontSize='large'
+          onClick={toggleDrawer(true)}
+        />
         <Drawer open={state} onClose={toggleDrawer(false)}>
           {list()}
         </Drawer>

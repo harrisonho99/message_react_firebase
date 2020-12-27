@@ -4,7 +4,7 @@ import Canvas from '../components/Canvas';
 import './home.css';
 
 export default function Home() {
-  const [title, setTitle] = React.useState('HI! CLICK TO MAKE BUBBLES');
+  const [title, setTitle] = React.useState('HI ! CLICK TO MAKE BUBBLES');
   React.useEffect(() => {
     function isCanvasSupported() {
       var elem = document.createElement('canvas');
@@ -16,7 +16,7 @@ export default function Home() {
     let container = document.querySelector('.App-Container');
     container.style.overflow = 'initial';
     container.style.zIndex = '100';
-  // eslint-disable-next-line react-hooks/exhaustive-deps
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   return (

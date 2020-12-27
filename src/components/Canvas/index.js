@@ -37,7 +37,7 @@ const Canvas = () => {
 
       function setAnimateRadius() {
         if (this.initRadius < this.radius) {
-          return (this.initRadius += 5);
+          return (this.initRadius += 2);
         }
         return this.initRadius;
       }
@@ -71,7 +71,7 @@ const Canvas = () => {
           let child = [];
           circle.push(child);
           for (let j = 0; j < input2; j++) {
-            let radius = random(10, 60);
+            let radius = random(10, 40);
             let ball = new Shape(
               random(0 + radius, width - radius),
               random(0 + radius, height - radius),
@@ -83,7 +83,7 @@ const Canvas = () => {
               //   255
               // )},${random(0.1, 1)})`
 
-              5
+              2
             );
             circle[i].push(ball);
           }
@@ -109,7 +109,7 @@ const Canvas = () => {
       //   makeBalls();
       //   window.cancelAnimationFrame(frame);
       //   animate();
-      // }, 2000);
+      // }, 1000);
       canvas.addEventListener('click', () => {
         input2++;
         makeBalls();

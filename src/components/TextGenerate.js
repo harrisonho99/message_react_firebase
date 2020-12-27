@@ -5,7 +5,7 @@ import { makeStyles } from '@material-ui/styles';
 const useStyle = makeStyles(() => ({
   title: {
     color: '#3F51B5',
-    fontWeight: 600,
+    fontWeight: 500,
     position: 'absolute',
     top: '20%',
     left: '50%',
@@ -14,7 +14,7 @@ const useStyle = makeStyles(() => ({
     maxWidth: 900,
     minWidth: 300,
     transform: 'translate(-50%, -50%)',
-    fontSize: '3.2rem',
+    fontSize: '3rem',
     userSelect: 'none',
   },
 }));
@@ -28,7 +28,7 @@ const TexGenerator = ({ title }) => {
   React.useEffect(() => {
     setTimeout(() => {
       setAppear('none');
-    }, timer * title.length + 2200);
+    }, timer * title.length + 2000);
   }, [appear, title.length]);
 
   React.useEffect(() => {
