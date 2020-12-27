@@ -81,7 +81,7 @@ const Canvas = () => {
               `rgba(${random(50, 255)},${random(50, 255)},${random(
                 50,
                 255
-              )},${random(0.1, 0.7)})`,
+              )},${random(0.1, 1)})`,
               5
             );
             circle[i].push(ball);
