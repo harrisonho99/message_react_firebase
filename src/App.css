@@ -1,25 +1,27 @@
 * {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-    font-family: "Roboto", sans-serif;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Roboto', sans-serif;
+  /* background-color: #eff7ff; */
 }
 
 body {
-    height: 100vh;
-    min-width: 353px;
+  height: 100vh;
+  min-width: 353px;
+  /* background-color: #e0f7fa; */
 }
 #root {
-    height: 100vh;
+  height: 100vh;
 }
 .App-Container {
-    width: 100%;
-    overflow: auto;
+  width: 100%;
+  overflow: auto;
 }
 .App {
-    height: 100%;
-    overflow: hidden;
-    position: relative;
-    top: 0px;
-    left: 0px;
+  height: 100%;
+  overflow: hidden;
+  position: relative;
+  top: 0px;
+  left: 0px;
 }

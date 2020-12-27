@@ -1,13 +1,13 @@
 #meesage-wrapper {
-    position: fixed;
-    bottom: 5px;
-    left: 0px;
-    width: 100%;
-    padding: 5px 0;
-    z-index: 3;
-    height: 84px;
-    background: white;
+  position: fixed;
+  bottom: 5px;
+  left: 0px;
+  width: 100%;
+  padding: 5px 0;
+  z-index: 3;
+  height: 84px;
+  background: #eff7ff;
 }
 .form-message {
-    display: flex;
+  display: flex;
 }
