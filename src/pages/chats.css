@@ -4,13 +4,14 @@
   height: 100%;
   overflow: hidden;
   z-index: 2;
-  background-color: #fffdff;
+  /* background-color: #fffdff; */
 }
 #chat-wrapper {
   height: 100%;
   width: 100%;
   position: absolute;
   overflow-y: auto;
+  background-color: #eff7ff;
 }
 .chats {
   margin: auto;

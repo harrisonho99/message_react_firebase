@@ -6,7 +6,7 @@
   padding: 5px 0;
   z-index: 3;
   height: 84px;
-  background: #eff7ff;
+  background: transparent;
 }
 .form-message {
   display: flex;
