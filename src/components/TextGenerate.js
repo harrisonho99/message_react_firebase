@@ -4,7 +4,7 @@ import { makeStyles } from '@material-ui/styles';
 
 const useStyle = makeStyles(() => ({
   title: {
-    color: '#6200ea',
+    color: '#3F51B5',
     fontWeight: 600,
     position: 'absolute',
     top: '20%',
@@ -23,13 +23,13 @@ const TexGenerator = ({ title }) => {
   let counterLength = 0;
   const [generateTitle, setGenerateTitle] = React.useState('');
   const [appear, setAppear] = React.useState('block');
-  const timer = 200;
+  const timer = 100;
 
   React.useEffect(() => {
     setTimeout(() => {
       setAppear('none');
     }, timer * title.length + 2200);
-  }, [appear]);
+  }, [appear, title.length]);
 
   React.useEffect(() => {
     if (typeof title === 'string') {
