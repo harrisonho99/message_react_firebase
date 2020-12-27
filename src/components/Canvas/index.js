@@ -25,13 +25,13 @@ const Canvas = () => {
       //function setup
 
       //constructor function
-      function Shape(x, y, radius, velX, velY, color, initRadius) {
+      function Shape(x, y, radius, velX, velY, initRadius) {
         this.x = x;
         this.y = y;
         this.radius = radius;
         this.velX = velX;
         this.velY = velY;
-        this.color = color;
+        this.color = 'rgba(63,81,181,0.6)';
         this.initRadius = initRadius;
       }
 
@@ -71,17 +71,18 @@ const Canvas = () => {
           let child = [];
           circle.push(child);
           for (let j = 0; j < input2; j++) {
-            let radius = random(20, 90);
+            let radius = random(10, 60);
             let ball = new Shape(
               random(0 + radius, width - radius),
               random(0 + radius, height - radius),
               radius,
-              random(-0.5, 0.5),
-              random(-0.5, 0.5),
-              `rgba(${random(50, 255)},${random(50, 255)},${random(
-                50,
-                255
-              )},${random(0.1, 1)})`,
+              random(-1, 1),
+              random(-1, 1),
+              // `rgba(${random(50, 255)},${random(50, 255)},${random(
+              //   50,
+              //   255
+              // )},${random(0.1, 1)})`
+
               5
             );
             circle[i].push(ball);
@@ -102,6 +103,13 @@ const Canvas = () => {
         frame = requestAnimationFrame(animate);
       }
       animate();
+
+      // let intervals = setInterval(() => {
+      //   input2++;
+      //   makeBalls();
+      //   window.cancelAnimationFrame(frame);
+      //   animate();
+      // }, 2000);
       canvas.addEventListener('click', () => {
         input2++;
         makeBalls();
@@ -109,6 +117,7 @@ const Canvas = () => {
         animate();
       });
       return () => {
+        // window.clearInterval(intervals);
         window.cancelAnimationFrame(frame);
         window.removeEventListener('resize', handleWindowResize);
       };
