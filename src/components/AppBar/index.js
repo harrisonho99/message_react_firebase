@@ -35,6 +35,7 @@ const useStyles = makeStyles((theme) => ({
     zIndex: 10,
     height: 60,
     overflow: 'hidden',
+    backgroundColor: '#303f9f',
   },
   Toolbar: {
     height: 60,
@@ -121,7 +122,7 @@ function Header(props) {
                   }}
                 >
                   <ListItemIcon>
-                    <HomeIcon fontSize='large' />
+                    <HomeIcon fontSize='large' color='primary' />
                   </ListItemIcon>
                   Home
                 </MenuItem>
@@ -131,7 +132,7 @@ function Header(props) {
                   }}
                 >
                   <ListItemIcon>
-                    <ChatIcon fontSize='large' />
+                    <ChatIcon fontSize='large' color='primary' />
                   </ListItemIcon>
                   Chat
                 </MenuItem>
@@ -145,7 +146,7 @@ function Header(props) {
                   }}
                 >
                   <ListItemIcon>
-                    <ExitToAppIcon fontSize='large' />
+                    <ExitToAppIcon fontSize='large' color='secondary' />
                   </ListItemIcon>
                   Sign out
                 </MenuItem>
@@ -189,7 +190,7 @@ function Header(props) {
                   }}
                 >
                   <ListItemIcon>
-                    <HomeIcon fontSize='large' />
+                    <HomeIcon fontSize='large' color='primary' />
                   </ListItemIcon>
                   Home
                 </MenuItem>
@@ -199,7 +200,7 @@ function Header(props) {
                   }}
                 >
                   <ListItemIcon>
-                    <LabelImportantIcon fontSize='large' />
+                    <LabelImportantIcon fontSize='large' color='primary' />
                   </ListItemIcon>
                   Log In
                 </MenuItem>
@@ -209,7 +210,7 @@ function Header(props) {
                   }}
                 >
                   <ListItemIcon>
-                    <PeopleIcon fontSize='large' />
+                    <PeopleIcon fontSize='large' color='primary' />
                   </ListItemIcon>
                   Register
                 </MenuItem>

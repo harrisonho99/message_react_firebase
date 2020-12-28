@@ -31,7 +31,7 @@ const Canvas = () => {
         this.radius = radius;
         this.velX = velX;
         this.velY = velY;
-        this.color = 'rgba(63,81,181,0.6)';
+        this.color = 'rgba(126, 87, 194,0.6)';
         this.initRadius = initRadius;
       }
 

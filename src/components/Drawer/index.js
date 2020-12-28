@@ -80,28 +80,28 @@ export default function TemporaryDrawer() {
       <List className={classes.list}>
         <ListItem button className={classes.listItems}>
           <ListItemIcon>
-            <PersonAddIcon fontSize='large' />
+            <PersonAddIcon fontSize='large' color='primary' />
           </ListItemIcon>
           <ListItemText primary={'ADD EMAIL'} />
         </ListItem>
         <Divider />
         <ListItem button className={classes.listItems}>
           <ListItemIcon>
-            <PersonPinIcon fontSize='large' />
+            <PersonPinIcon fontSize='large' color='primary' />
           </ListItemIcon>
           <ListItemText primary={'MY PROFILE'} />
         </ListItem>
         <Divider />
         <ListItem button className={classes.listItems}>
           <ListItemIcon>
-            <InfoIcon fontSize='large' />
+            <InfoIcon fontSize='large' color='primary' />
           </ListItemIcon>
           <ListItemText primary={'ABOUT THIS APP'} />
         </ListItem>
         <Divider />
         <ListItem button className={classes.listItems}>
           <ListItemIcon>
-            <SettingsIcon fontSize='large' />
+            <SettingsIcon fontSize='large' color='primary' />
           </ListItemIcon>
           <ListItemText primary={'SETTING'} />
         </ListItem>

@@ -26,24 +26,26 @@ const TexGenerator = ({ title }) => {
   const timer = 100;
 
   React.useEffect(() => {
-    setTimeout(() => {
-      setAppear('none');
-    }, timer * title.length + 2000);
-  }, [appear, title.length]);
+    let interval;
+    let timeOut;
 
-  React.useEffect(() => {
+    timeOut = setTimeout(() => {
+      setAppear('none');
+      window.clearInterval(interval);
+    }, timer * title.length + 2000);
     if (typeof title === 'string') {
-      let interval = 100;
       interval = setInterval(() => {
         if (generateTitle.length < title.length) {
           setGenerateTitle(title.substring(0, ++counterLength));
-          console.log('intervals');
         } else {
           clearInterval(interval);
         }
       }, timer);
     }
-
+    return () => {
+      window.clearInterval(interval);
+      window.clearTimeout(timeOut);
+    };
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
   return (
