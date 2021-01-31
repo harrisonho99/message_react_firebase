@@ -40,7 +40,11 @@ export default class Chat extends React.Component {
               this.setState({ chats });
             })
             .then(() => {
-              this.setState({ readError: null, isLoading: false });
+              this.setState({
+                readError: null,
+                isLoading: false,
+                smallProgressRunning: false,
+              });
               if (this.chatRef?.current) {
                 const node = this.chatRef.current;
                 node.scrollIntoView({
@@ -60,6 +64,7 @@ export default class Chat extends React.Component {
 
   handleFirstRefDisplaying = () => {
     if (this.chatWrapperRef.current) {
+      let lastMessage = this.chatRef;
       let wrapper = this.chatWrapperRef.current;
       wrapper.onscroll = () => {
         let chats = [];
@@ -102,10 +107,10 @@ export default class Chat extends React.Component {
                     });
                   })
                   .then((e) => {
-                    console.log(e);
                     //change  defaault browser behavior when append content to top
                     if (e) {
-                      wrapper.scrollTo(0, wrapper.offsetHeight);
+                      lastMessage.scrollIntoView();
+                      // wrapper.scrollTo(0, wrapper.offsetHeight);
                     }
                   })
                   .catch((error) => {
@@ -159,21 +164,19 @@ export default class Chat extends React.Component {
 
               {this.state.chats.map((chat, index) => {
                 // set ref to scroll when new meesage appear
-                if (index === this.state.chats.length - 1) {
-                  return (
-                    <MeCard
-                      name={chat.name}
-                      currentUid={this.state.user.uid}
-                      uid={chat.uid}
-                      ref={this.chatRef}
-                      key={chat.timestamp}
-                      email={this.state.user.email}
-                      textContent={chat.content}
-                      timestamp={chat.timestamp}
-                    />
-                  );
-                }
-                return (
+
+                return index === this.state.chats.length - 1 ? (
+                  <MeCard
+                    name={chat.name}
+                    currentUid={this.state.user.uid}
+                    uid={chat.uid}
+                    ref={this.chatRef}
+                    key={chat.timestamp}
+                    email={this.state.user.email}
+                    textContent={chat.content}
+                    timestamp={chat.timestamp}
+                  />
+                ) : (
                   <MeCard
                     name={chat.name}
                     currentUid={this.state.user.uid}
